@@ -4,9 +4,9 @@ SDL Setup is a basic C++ template project to get started with SDL, using CMake a
 ## Getting started
 ### Prerequisites
 ```
-cmake
-g++/clang++/msvc
-sdl2
+cmake # install however your platform wants you to
+g++/clang++/msvc # toolchain will be explained
+sdl2 # library will be explained
 ```
 
 ### Installation
@@ -57,13 +57,42 @@ In the CMake options, fill in `-DCMAKE_TOOLCHAIN_FILE={ VPCKG DIR }/scripts/buil
 
 ![Clion environment/toolchain](docs/clion_cmakeoptions.png)
 
+#### Linux
+##### Toolchain
+Building on Linux is much easier. For this setup, we will be using Ubuntu 18.04/Debian. Install either g++ or clang++ using apt.
+`sudo apt-get install clang++ g++`
+
+##### Package manager
+Linux does not need a package manager, besides its own. On Ubuntu:
+`sudo apt-get install libsdl-2dev`
+
+##### Clion
+Clion is optional, use whatever CMake-compatible IDE, or your favorite text editor if you want to. Building can be done
+in the terminal.
+
+Clion can be installed using the default settings.
 
 ### Compiling and running
 #### Windows
 1. Git clone the repo.
 2. Open Clion, 'Import Project from Sources'. Navigate to the repo.
 3. Wait for CMake to finish processing, and try building. Building should be successful.
-4. Go to the project folder, it should contain a `/build` folder.
+4. Go to the project folder, it should contain a `/bin` folder.
 5. Running the exe will result in an error: you need the appropriate DLL's.
-6. Go to `{ VCPKG DIR}/installed/x86-windows/debug/bin`, copy paste SDL2d.dll to the build folder, and rename to SDL2.dll
-7. Run the executable again. If a white window pop ups, and disappears after 3 seconds, the setup was successful.
+6. Go to `{ VCPKG DIR}/installed/x86-windows/debug/bin`, copy paste SDL2d.dll to the project/bin folder, and rename to SDL2.dll
+7. Run the executable again. On success, a blank window called 'An SDL2 Window' will pop up, and dissapear after 3
+   seconds.
+
+#### Linux
+##### Clion
+Follow Windows steps 1-4: you do not need DLL's. It will work out of the box.
+
+#### Terminal
+
+1. Git clone the repo.
+2. Create a `build` folder, cd into it.
+3. `cmake ..` to generate build files. `make` to compile.
+4. Executable can be found in project/bin.
+5. Run the executable. On success, a blank window called 'An SDL2 Window' will pop up, and dissapear after 3
+   seconds.
+
