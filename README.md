@@ -65,5 +65,5 @@ In the CMake options, fill in `-DCMAKE_TOOLCHAIN_FILE={ VPCKG DIR }/scripts/buil
 3. Wait for CMake to finish processing, and try building. Building should be successful.
 4. Go to the project folder, it should contain a `/build` folder.
 5. Running the exe will result in an error: you need the appropriate DLL's.
-6. Go to `{ VCPKG DIR}/installed/x86-windows/debug/bin, copy paste SDL2d.dll to the build folder, and rename to SDL2.dll
+6. Go to `{ VCPKG DIR}/installed/x86-windows/debug/bin`, copy paste SDL2d.dll to the build folder, and rename to SDL2.dll
 7. Run the executable again. If a white window pop ups, and disappears after 3 seconds, the setup was successful.
