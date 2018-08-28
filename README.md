@@ -80,7 +80,6 @@ Clion can be installed using the default settings.
 4. Go to the project folder, it should contain a `/bin` folder.
 5. Running the exe will result in an error: you need the appropriate DLL's.
 6. Go to `{ VCPKG DIR}/installed/x86-windows/debug/bin`, copy paste SDL2d.dll to the project/bin folder, and rename to SDL2.dll
-7. Run the executable again. On success, a blank window called 'An SDL2 Window' will pop up, and dissapear after 3
    seconds.
 
 #### Linux
@@ -93,6 +92,9 @@ Follow Windows steps 1-4: you do not need DLL's. It will work out of the box.
 2. Create a `build` folder, cd into it.
 3. `cmake ..` to generate build files. `make` to compile.
 4. Executable can be found in project/bin.
-5. Run the executable. On success, a blank window called 'An SDL2 Window' will pop up, and dissapear after 3
    seconds.
+
+---
+
+Running the executable should result in a blank 640x480 window, that you can move around and close.
 
