@@ -79,14 +79,15 @@ Clion can be installed using the default settings.
 3. Wait for CMake to finish processing, and try building. Building should be successful.
 4. Go to the project folder, it should contain a `/bin` folder.
 5. Running the exe will result in an error: you need the appropriate DLL's.
-6. Go to `{ VCPKG DIR}/installed/x86-windows/debug/bin`, copy paste SDL2d.dll to the project/bin folder, and rename to SDL2.dll
+6. Go to `{VCPKG DIR}/installed/x86-windows/debug/bin`, copy paste SDL2d.dll to the project/bin folder, and rename to SDL2.dll
+7. Run the executable again. On success, a blank window called 'An SDL2 Window' will pop up, and dissapear after 3
    seconds.
 
 #### Linux
 ##### Clion
 Follow Windows steps 1-4: you do not need DLL's. It will work out of the box.
 
-#### Terminal
+##### Terminal
 
 1. Git clone the repo.
 2. Create a `build` folder, cd into it.
