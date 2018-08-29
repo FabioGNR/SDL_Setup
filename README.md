@@ -72,6 +72,26 @@ in the terminal.
 
 Clion can be installed using the default settings.
 
+#### MacOS
+##### Toolchain
+Building on Mac is nearly the same as Linux. MacOS comes with Clang as default, when
+installing the XCode development tools.
+
+When entering `gcc` into the terminal, it will open a prompt asking you if you want to install development tools.
+Install them there.
+
+
+##### Package manager
+You can use *brew* to install SDL, and CMake if you want to compile on the terminal.
+`brew install sdl2`
+`brew install cmake`
+
+##### Clion
+Clion is optional, use whatever CMake-compatible IDE, or your favorite text editor if you want to. Building can be done
+in the terminal.
+
+Clion can be installed using the default settings.
+
 ### Compiling and running
 #### Windows
 1. Git clone the repo.
@@ -83,7 +103,7 @@ Clion can be installed using the default settings.
 7. Run the executable again. On success, a blank window called 'An SDL2 Window' will pop up, and dissapear after 3
    seconds.
 
-#### Linux
+#### Linux & MacOS
 ##### Clion
 Follow Windows steps 1-4: you do not need DLL's. It will work out of the box.
 
@@ -93,7 +113,6 @@ Follow Windows steps 1-4: you do not need DLL's. It will work out of the box.
 2. Create a `build` folder, cd into it.
 3. `cmake ..` to generate build files. `make` to compile.
 4. Executable can be found in project/bin.
-   seconds.
 
 ---
 
