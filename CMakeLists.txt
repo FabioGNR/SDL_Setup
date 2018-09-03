@@ -10,13 +10,17 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 find_package(SDL2 REQUIRED)
-
 include_directories(${SDL2_INCLUDE_DIR})
 
 set (SDL_SETUP_SOURCES
         src/main.cpp
         src/SimpleWindow.cpp
         src/SimpleWindow.h
+        src/ecs/Component.h
+        src/ecs/ComponentManager.h
+        src/ecs/Entity.h
+        src/ecs/EntityManager.h
+        src/ecs/System.h
         )
 
 add_executable(SDL_Setup ${SDL_SETUP_SOURCES})
